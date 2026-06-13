@@ -1,0 +1,137 @@
+name: Degreed FinOps
+description: >-
+  Financial operations considerations for organizations consuming the Degreed
+  API. Degreed's pricing is user-seat-based with annual contracts rather than
+  API-call-based billing. There are no per-API-call charges or metered usage
+  fees. Cost optimization focuses on user license management, contract
+  negotiation, and integration efficiency rather than minimizing API call
+  volume. All API access is included within the organizational subscription.
+pricingModel:
+  type: user-seat subscription
+  billingCycle: annual
+  apiCallBilling: false
+  description: >-
+    Degreed charges per licensed user on an annual contract basis. API usage
+    does not incur additional per-call fees. Organizations pay for the number
+    of active users in their Degreed instance regardless of API consumption
+    volume.
+
+costDrivers:
+  - name: User Seat Count
+    description: >-
+      The primary cost driver. Pricing scales with the number of licensed
+      users. Larger organizations typically negotiate lower per-user rates.
+      Benchmark: approximately $10-$15 per user per month at enterprise scale.
+    tier: all
+    impact: high
+
+  - name: Feature Tier
+    description: >-
+      Advanced features such as Skills+, Degreed Intelligence analytics,
+      AI-driven skill inference, and custom reporting may be included or
+      add-on depending on contract terms. Negotiate feature scope upfront.
+    tier: enterprise
+    impact: medium
+
+  - name: Integration Complexity
+    description: >-
+      Deep integrations with HRIS systems (Workday, SAP SuccessFactors),
+      LMS platforms (Cornerstone, Docebo), and content providers
+      (LinkedIn Learning, Coursera) may involve professional services
+      fees for implementation and configuration.
+    tier: enterprise
+    impact: medium
+
+  - name: Implementation Services
+    description: >-
+      One-time implementation and onboarding costs typically range from
+      $2,000 to $5,000 for SMB and $10,000 to $20,000 for enterprise.
+      Average implementation timeline is approximately 5 months.
+    tier: all
+    impact: medium
+    oneTime: true
+
+  - name: Contract Term Length
+    description: >-
+      Multi-year commitments may unlock discounted per-user rates.
+      Annual renewal increases should be proactively negotiated.
+      Early termination clauses should be reviewed carefully.
+    tier: enterprise
+    impact: medium
+
+optimizationStrategies:
+  - name: Right-size User Licenses
+    description: >-
+      Audit active user counts regularly. Degreed charges per licensed
+      user; removing inactive or departed employees before renewal
+      reduces costs. Align headcount data via HRIS integration to
+      keep the user roster current.
+
+  - name: Negotiate Per-User Rate at Renewal
+    description: >-
+      Per-user rates decrease with larger user pools. At renewal,
+      provide accurate growth projections and benchmark against
+      industry peers. Negotiate a cap on annual price increases.
+
+  - name: Bundle Integrations in Initial Contract
+    description: >-
+      Integration support and professional services are easier and
+      cheaper to include in the initial contract than to add later.
+      Identify all required HRIS, LMS, and content provider integrations
+      before signing.
+
+  - name: Use Webhooks Over Polling
+    description: >-
+      Although API calls are not metered, efficient API design reduces
+      internal engineering overhead. Webhooks for real-time events
+      (completions, enrollments) reduce the need for frequent polling
+      and simplify integration architecture.
+
+  - name: Leverage xAPI for Content Completions
+    description: >-
+      xAPI statement ingestion is a cost-effective way to pipe completion
+      data from external LMS platforms into Degreed without building
+      custom REST integration middleware.
+
+  - name: Evaluate Custom Rate Limit Needs Early
+    description: >-
+      If integration volumes exceed 200 requests per minute, request a
+      custom rate limit increase from the Technical Solutions Specialist
+      during contract negotiation rather than after deployment.
+
+budgetingGuidance:
+  licenseCosts:
+    smb:
+      perUserMonthly: 15
+      minimumUsers: 10
+      annualEstimate: "$1,800 per user per year (10-999 users)"
+    enterprise:
+      perUserMonthly: 10
+      minimumUsers: 1000
+      annualEstimate: "$1,200 per user per year (1,000+ users, negotiated)"
+  implementationCosts:
+    smb: "$2,000 - $5,000 one-time"
+    enterprise: "$10,000 - $20,000 one-time"
+  hiddenCosts:
+    - Annual renewal price escalation (negotiate a cap)
+    - Add-on professional services for complex integrations
+    - Training and change management for end users
+    - Migration costs if moving from a previous LXP
+
+apiCostModel:
+  metered: false
+  rateLimitDefault: 200 requests per minute
+  rateLimitCustom: Available upon request via Technical Solutions Specialist
+  overage: No overage charges; 429 responses throttle excess traffic
+  notes: >-
+    Since API calls are not billed, FinOps focus for Degreed API
+    integration should be on engineering efficiency, integration
+    maintenance costs, and ensuring the data flowing through the
+    API supports demonstrable business outcomes (skill gap closure,
+    learning completion rates, workforce readiness metrics) that
+    justify the subscription investment.
+
+contact:
+  sales: https://degreed.com/contact
+  documentation: https://developer.degreed.com/docs/getting-started-with-the-api
+  pricingReference: https://elearningindustry.com/directory/elearning-software/degreed/pricing

@@ -1,0 +1,71 @@
+aid: degreed
+name: Degreed
+description: >-
+  Degreed is a learning experience platform with a REST API for managing
+  learning pathways, tracking skill development, accessing content integrations,
+  and reporting workforce upskilling data. The API enables organizations to
+  manage users, content, completions, skills, pathways, accomplishments, and
+  social learning features using OAuth 2.0 authentication. Multi-region
+  deployments are supported across US, EU, and Canada data centers.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: '0.19'
+tags:
+  - Learning Experience Platform
+  - Skill Development
+  - Learning Pathways
+  - Workforce Upskilling
+  - eLearning
+  - HR Technology
+apis:
+  - aid: degreed:degreed-api
+    name: Degreed API
+    description: >-
+      The Degreed REST API provides HTTP-based access to manage learning data
+      within the Degreed platform. It covers user management, learning content
+      (articles, books, courses, videos, podcasts, events), pathways, skill
+      tracking, completions, accomplishments, groups, required and recommended
+      learning, and xAPI statement ingestion. Authentication uses OAuth 2.0
+      Client Credentials Flow.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.degreed.com/reference/overview
+    baseURL: https://api.degreed.com
+    tags:
+      - Learning
+      - Skills
+      - Pathways
+      - Completions
+      - Users
+      - Content
+    properties:
+      - type: Documentation
+        url: https://developer.degreed.com/docs/getting-started-with-the-api
+      - type: Authentication
+        url: https://developer.degreed.com/docs/authentication
+      - type: RateLimits
+        url: https://developer.degreed.com/docs/rate-limiting
+      - type: Integrations
+        url: https://developer.degreed.com/docs/degreed-integrations
+      - type: Changelog
+        url: https://developer.degreed.com/changelog
+      - type: xAPI
+        url: https://developer.degreed.com/docs/getting-started-with-the-xapi
+      - type: OpenAIIndex
+        url: https://developer.degreed.com/llms.txt
+common:
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/plans/degreed-plans-pricing.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/rate-limits/degreed-rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/finops/degreed-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

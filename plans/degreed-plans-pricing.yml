@@ -1,0 +1,90 @@
+name: Degreed Plans and Pricing
+description: >-
+  Degreed uses a subscription-based SaaS pricing model with annual contracts.
+  The platform is primarily designed for enterprise organizations and does not
+  publicly disclose specific per-user pricing. Interested organizations must
+  contact Degreed sales for a customized quote based on their headcount,
+  required features, and integration needs. Degreed is used by one in three
+  Fortune 50 companies and is ideally suited for enterprises with 5,000 or
+  more employees. API access is included as part of the organizational
+  subscription and is managed by Technical Admins with the Manage API Keys
+  permission.
+plans:
+  - name: Individual
+    description: >-
+      Free access for individual learners on the Degreed platform. Provides
+      access to personal learning pathways, skill tracking, and content
+      discovery. API access is not available at this tier.
+    price: 0
+    unit: per user per month
+    currency: USD
+    features:
+      - Personal learning pathways
+      - Skill tracking
+      - Content discovery
+      - Social learning features
+    apiAccess: false
+
+  - name: Professional (SMB)
+    description: >-
+      Subscription plan for smaller organizations. Pricing begins at
+      approximately $15 per user per month for organizations with fewer than
+      1,000 users. API access is available for Technical Admins. Contact
+      Degreed sales for exact pricing.
+    price: 15
+    unit: per user per month
+    currency: USD
+    billingCycle: annual
+    minimumUsers: 10
+    features:
+      - All Individual features
+      - Organization-level user management
+      - Content catalog management
+      - Required and recommended learning
+      - Completion tracking
+      - API access with OAuth 2.0
+      - Integration support
+    apiAccess: true
+    contactForPricing: true
+
+  - name: Enterprise
+    description: >-
+      Custom enterprise pricing for organizations with 1,000 or more users,
+      typically ranging from $10 to $15 per user per month depending on scale
+      and contract terms. Includes advanced features such as Skills+, AI-driven
+      skill assessment, Degreed Intelligence reporting, multi-region data
+      hosting (US, EU, CA), and dedicated Technical Solutions Specialist support.
+      API rate limits can be increased beyond the default 200 requests per
+      minute upon request.
+    price: 10
+    priceHigh: 15
+    unit: per user per month
+    currency: USD
+    billingCycle: annual
+    minimumUsers: 1000
+    features:
+      - All Professional features
+      - Skills+ with skill categories and proficiency levels
+      - AI-driven skill inference and recommendations
+      - Degreed Intelligence analytics and reporting
+      - Multi-region data hosting (US, EU, Canada)
+      - Advanced integrations (Workday, SAP SuccessFactors, Cornerstone)
+      - HRIS synchronization
+      - xAPI statement ingestion
+      - Webhook support for real-time data sync
+      - Custom API rate limit increases
+      - Job roles and skill plans
+      - Dedicated Technical Solutions Specialist
+      - Configurable token validity (default 60 days)
+    apiAccess: true
+    contactForPricing: true
+
+contact:
+  sales: https://degreed.com/contact
+  documentation: https://developer.degreed.com/docs/getting-started-with-the-api
+notes: >-
+  Implementation costs for enterprise deployments typically range from
+  $10,000 to $20,000 with an average implementation timeline of approximately
+  5 months. Annual contract renewals should be negotiated proactively.
+  Degreed does not publicly list enterprise pricing; all quotes are customized
+  based on organizational size, features required, and integration complexity.

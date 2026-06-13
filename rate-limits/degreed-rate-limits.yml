@@ -1,0 +1,91 @@
+name: Degreed API Rate Limits
+description: >-
+  Degreed enforces rate limiting on all API clients to ensure platform
+  stability and fair use. As of June 16, 2026, the default rate limit
+  increased from 70 to 200 requests per minute across all environments
+  (US, EU, and Canada). Organizations requiring higher throughput can
+  contact their Degreed Technical Solutions Specialist to request an
+  adjustment. Rate limit state is communicated via HTTP response headers
+  on every API response.
+limits:
+  - name: Standard Rate Limit
+    description: >-
+      Default limit applied to all API client credentials. Applies
+      uniformly across all v2 and v3 endpoints, all HTTP methods
+      (GET, POST, PATCH, DELETE), and all Degreed environments.
+    requests: 200
+    window: 1 minute
+    windowSeconds: 60
+    scope: per client credentials (client_id)
+    environments:
+      - US Production (api.degreed.com)
+      - US Betatest (api.betatest.degreed.com)
+      - EU Production (api.eu.degreed.com)
+      - EU Betatest (api.eu.betatest.degreed.com)
+      - CA Production (api.ca.degreed.com)
+
+  - name: Custom / Elevated Rate Limit
+    description: >-
+      Organizations with high-volume integration needs can request an
+      elevated rate limit above 200 requests per minute. These are
+      negotiated on a per-client basis with a Degreed Technical
+      Solutions Specialist.
+    requests: custom
+    window: 1 minute
+    scope: per client credentials (client_id)
+    contactRequired: true
+
+headers:
+  - name: X-Rate-Limit-Limit
+    description: >-
+      Specifies the rate limit period in use. Returns a value such as
+      "1m" indicating the rolling window is one minute.
+    example: "1m"
+
+  - name: X-Rate-Limit-Remaining
+    description: >-
+      The number of requests the client may still make within the
+      current rate limit window.
+    example: "150"
+
+  - name: X-Rate-Limit-Reset
+    description: >-
+      UTC timestamp in ISO 8601 format indicating when the current
+      rate limit window resets and the full quota becomes available again.
+    example: "2026-06-13T14:30:00Z"
+
+  - name: Retry-After
+    description: >-
+      Returned only when a 429 Too Many Requests response is issued.
+      Indicates the number of seconds the client should wait before
+      making another request.
+    example: "30"
+
+errorResponse:
+  status: 429
+  statusText: Too Many Requests
+  description: >-
+    Returned when a client exceeds the 200 requests per minute limit.
+    The response includes a Retry-After header indicating how long to
+    wait before retrying. Clients should implement exponential backoff
+    when receiving 429 responses.
+
+history:
+  - date: 2026-06-16
+    change: Default rate limit increased from 70 to 200 requests per minute
+    requiresAction: false
+  - date: prior
+    limit: 70
+    unit: requests per minute
+    notes: Original default rate limit at API launch
+
+bestPractices:
+  - Implement exponential backoff when receiving 429 responses
+  - Monitor X-Rate-Limit-Remaining headers to throttle proactively
+  - Use minimal OAuth scopes to keep tokens lightweight
+  - Batch requests where the API supports it (e.g., bulk user imports)
+  - Avoid polling endpoints more frequently than necessary; use webhooks for real-time events
+
+contact:
+  rateLimitIncrease: Contact your Degreed Technical Solutions Specialist
+  documentation: https://developer.degreed.com/docs/rate-limiting
