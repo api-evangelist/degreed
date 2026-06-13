@@ -1,0 +1,320 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "degreed": "https://api.degreed.com/schemas/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "User": {
+      "@id": "degreed:User",
+      "@context": {
+        "id": {
+          "@id": "degreed:userId",
+          "@type": "xsd:string"
+        },
+        "email": {
+          "@id": "schema:email",
+          "@type": "xsd:string"
+        },
+        "employee_id": {
+          "@id": "degreed:employeeId",
+          "@type": "xsd:string"
+        },
+        "full_name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "first_name": {
+          "@id": "schema:givenName",
+          "@type": "xsd:string"
+        },
+        "last_name": {
+          "@id": "schema:familyName",
+          "@type": "xsd:string"
+        },
+        "organization_code": {
+          "@id": "degreed:organizationCode",
+          "@type": "xsd:string"
+        },
+        "profile_image_url": {
+          "@id": "schema:image",
+          "@type": "@id"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updated_at": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Skill": {
+      "@id": "degreed:Skill",
+      "@context": {
+        "id": {
+          "@id": "degreed:skillId",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "rating": {
+          "@id": "degreed:skillRating",
+          "@type": "xsd:number"
+        },
+        "category": {
+          "@id": "degreed:skillCategory",
+          "@type": "xsd:string"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updated_at": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Pathway": {
+      "@id": "degreed:Pathway",
+      "@context": {
+        "id": {
+          "@id": "degreed:pathwayId",
+          "@type": "xsd:string"
+        },
+        "title": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "image_url": {
+          "@id": "schema:image",
+          "@type": "@id"
+        },
+        "is_published": {
+          "@id": "degreed:isPublished",
+          "@type": "xsd:boolean"
+        },
+        "sections": {
+          "@id": "degreed:pathwaySections",
+          "@type": "@json"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updated_at": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Completion": {
+      "@id": "degreed:Completion",
+      "@context": {
+        "id": {
+          "@id": "degreed:completionId",
+          "@type": "xsd:string"
+        },
+        "user_id": {
+          "@id": "degreed:userId",
+          "@type": "xsd:string"
+        },
+        "content_id": {
+          "@id": "degreed:contentId",
+          "@type": "xsd:string"
+        },
+        "content_type": {
+          "@id": "degreed:contentType",
+          "@type": "xsd:string"
+        },
+        "completed_at": {
+          "@id": "schema:endDate",
+          "@type": "xsd:dateTime"
+        },
+        "percentile": {
+          "@id": "degreed:percentile",
+          "@type": "xsd:number"
+        },
+        "duration_in_minutes": {
+          "@id": "schema:timeRequired",
+          "@type": "xsd:number"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Content": {
+      "@id": "degreed:Content",
+      "@context": {
+        "id": {
+          "@id": "degreed:contentId",
+          "@type": "xsd:string"
+        },
+        "title": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "image_url": {
+          "@id": "schema:image",
+          "@type": "@id"
+        },
+        "content_type": {
+          "@id": "degreed:contentType",
+          "@type": "xsd:string"
+        },
+        "provider": {
+          "@id": "degreed:provider",
+          "@type": "xsd:string"
+        },
+        "duration_in_minutes": {
+          "@id": "schema:timeRequired",
+          "@type": "xsd:number"
+        },
+        "language": {
+          "@id": "schema:inLanguage",
+          "@type": "xsd:string"
+        },
+        "is_active": {
+          "@id": "degreed:isActive",
+          "@type": "xsd:boolean"
+        },
+        "skills": {
+          "@id": "degreed:contentSkills",
+          "@container": "@list"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updated_at": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Group": {
+      "@id": "degreed:Group",
+      "@context": {
+        "id": {
+          "@id": "degreed:groupId",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "is_private": {
+          "@id": "degreed:isPrivate",
+          "@type": "xsd:boolean"
+        },
+        "member_count": {
+          "@id": "degreed:memberCount",
+          "@type": "xsd:integer"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updated_at": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Accomplishment": {
+      "@id": "degreed:Accomplishment",
+      "@context": {
+        "id": {
+          "@id": "degreed:accomplishmentId",
+          "@type": "xsd:string"
+        },
+        "user_id": {
+          "@id": "degreed:userId",
+          "@type": "xsd:string"
+        },
+        "type": {
+          "@id": "degreed:accomplishmentType",
+          "@type": "xsd:string"
+        },
+        "title": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "date_completed": {
+          "@id": "schema:endDate",
+          "@type": "xsd:dateTime"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "JobRole": {
+      "@id": "degreed:JobRole",
+      "@context": {
+        "id": {
+          "@id": "degreed:jobRoleId",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "skills": {
+          "@id": "degreed:roleSkills",
+          "@container": "@list"
+        },
+        "created_at": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updated_at": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}
