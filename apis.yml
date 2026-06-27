@@ -50,7 +50,7 @@ apis:
         url: https://developer.degreed.com/docs/rate-limiting
       - type: Integrations
         url: https://developer.degreed.com/docs/degreed-integrations
-      - type: Changelog
+      - type: ChangeLog
         url: https://developer.degreed.com/changelog
       - type: xAPI
         url: https://developer.degreed.com/docs/getting-started-with-the-xapi
