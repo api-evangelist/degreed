@@ -57,6 +57,10 @@ apis:
       - type: OpenAIIndex
         url: https://developer.degreed.com/llms.txt
 common:
+  - type: TrustCenter
+    url: security/degreed-trust-center.yml
+  - type: DomainSecurity
+    url: security/degreed-domain-security.yml
   - type: Plans
     url: >-
       https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/plans/degreed-plans-pricing.yml
