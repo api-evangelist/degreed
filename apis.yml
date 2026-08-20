@@ -31,6 +31,13 @@ tags:
   - Skill Development
   - Learning Pathways
   - Workforce Upskilling
+  - E-Learning
+  - HR Technology
+tags_raw:
+  - Learning Experience Platform
+  - Skill Development
+  - Learning Pathways
+  - Workforce Upskilling
   - eLearning
   - HR Technology
 apis:
@@ -47,6 +54,13 @@ apis:
     humanURL: https://developer.degreed.com/reference/overview
     baseURL: https://api.degreed.com
     tags:
+      - Learning
+      - Skills
+      - Pathways
+      - Completions
+      - User
+      - Content
+    tags_raw:
       - Learning
       - Skills
       - Pathways
