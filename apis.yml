@@ -1,12 +1,10 @@
 aid: degreed
 name: Degreed
-description: >-
-  Degreed is a learning experience platform with a REST API for managing
-  learning pathways, tracking skill development, accessing content integrations,
-  and reporting workforce upskilling data. The API enables organizations to
-  manage users, content, completions, skills, pathways, accomplishments, and
-  social learning features using OAuth 2.0 authentication. Multi-region
-  deployments are supported across US, EU, and Canada data centers.
+description: Degreed is a learning experience platform with a REST API for managing learning pathways,
+  tracking skill development, accessing content integrations, and reporting workforce upskilling data.
+  The API enables organizations to manage users, content, completions, skills, pathways, accomplishments,
+  and social learning features using OAuth 2.0 authentication. Multi-region deployments are supported
+  across US, EU, and Canada data centers.
 type: Index
 deliveryModel:
   model: saas
@@ -32,81 +30,76 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/degreed.png
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/apis.yml
 created: 2026-06-13
-modified: 2026-06-13
+modified: '2026-09-16'
 specificationVersion: '0.23'
 tags:
-  - Learning Experience Platform
-  - Skill Development
-  - Learning Pathways
-  - Workforce Upskilling
-  - E-Learning
-  - HR Technology
+- Learning Experience Platform
+- Skill Development
+- Learning Pathways
+- Workforce Upskilling
+- E-Learning
+- HR Technology
 tags_raw:
-  - Learning Experience Platform
-  - Skill Development
-  - Learning Pathways
-  - Workforce Upskilling
-  - eLearning
-  - HR Technology
+- Learning Experience Platform
+- Skill Development
+- Learning Pathways
+- Workforce Upskilling
+- eLearning
+- HR Technology
 apis:
-  - aid: degreed:degreed-api
-    name: Degreed API
-    description: >-
-      The Degreed REST API provides HTTP-based access to manage learning data
-      within the Degreed platform. It covers user management, learning content
-      (articles, books, courses, videos, podcasts, events), pathways, skill
-      tracking, completions, accomplishments, groups, required and recommended
-      learning, and xAPI statement ingestion. Authentication uses OAuth 2.0
-      Client Credentials Flow.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.degreed.com/reference/overview
-    baseURL: https://api.degreed.com
-    tags:
-      - Learning
-      - Skills
-      - Pathways
-      - Completions
-      - User
-      - Content
-    tags_raw:
-      - Learning
-      - Skills
-      - Pathways
-      - Completions
-      - Users
-      - Content
-    properties:
-      - type: Documentation
-        url: https://developer.degreed.com/docs/getting-started-with-the-api
-      - type: Authentication
-        url: https://developer.degreed.com/docs/authentication
-      - type: RateLimits
-        url: https://developer.degreed.com/docs/rate-limiting
-      - type: Integrations
-        url: https://developer.degreed.com/docs/degreed-integrations
-      - type: ChangeLog
-        url: https://developer.degreed.com/changelog
-      - type: xAPI
-        url: https://developer.degreed.com/docs/getting-started-with-the-xapi
-      - type: OpenAIIndex
-        url: https://developer.degreed.com/llms.txt
-common:
-  - type: TrustCenter
-    url: security/degreed-trust-center.yml
-  - type: DomainSecurity
-    url: security/degreed-domain-security.yml
-  - type: Plans
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/plans/degreed-plans-pricing.yml
+- aid: degreed:degreed-api
+  name: Degreed API
+  description: The Degreed REST API provides HTTP-based access to manage learning data within the Degreed
+    platform. It covers user management, learning content (articles, books, courses, videos, podcasts,
+    events), pathways, skill tracking, completions, accomplishments, groups, required and recommended
+    learning, and xAPI statement ingestion. Authentication uses OAuth 2.0 Client Credentials Flow.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.degreed.com/reference/overview
+  baseURL: https://api.degreed.com
+  tags:
+  - Learning
+  - Skills
+  - Pathways
+  - Completions
+  - User
+  - Content
+  tags_raw:
+  - Learning
+  - Skills
+  - Pathways
+  - Completions
+  - Users
+  - Content
+  properties:
+  - type: Documentation
+    url: https://developer.degreed.com/docs/getting-started-with-the-api
+  - type: Authentication
+    url: https://developer.degreed.com/docs/authentication
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/rate-limits/degreed-rate-limits.yml
-  - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/finops/degreed-finops.yml
+    url: https://developer.degreed.com/docs/rate-limiting
+  - type: Integrations
+    url: https://developer.degreed.com/docs/degreed-integrations
+  - type: ChangeLog
+    url: https://developer.degreed.com/changelog
+  - type: xAPI
+    url: https://developer.degreed.com/docs/getting-started-with-the-xapi
+  - type: OpenAIIndex
+    url: https://developer.degreed.com/llms.txt
+common:
+- type: Website
+  url: https://degreed.com
+- type: TrustCenter
+  url: security/degreed-trust-center.yml
+- type: DomainSecurity
+  url: security/degreed-domain-security.yml
+- type: Plans
+  url: https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/plans/degreed-plans-pricing.yml
+- type: RateLimits
+  url: https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/rate-limits/degreed-rate-limits.yml
+- type: FinOps
+  url: https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/finops/degreed-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
