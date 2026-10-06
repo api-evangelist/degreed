@@ -32,7 +32,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/degreed.png
 url: https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/apis.yml
 created: 2026-06-13
-modified: '2026-09-16'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 tags:
 - Learning Experience Platform
@@ -88,6 +88,10 @@ apis:
   - type: OpenAIIndex
     url: https://developer.degreed.com/llms.txt
 common:
+- url: https://degreed.com/experience/newsroom/
+  type: Blog
+- url: https://degreed.com/experience/feed/
+  type: BlogRSS
 - type: Website
   url: https://degreed.com
 - type: TrustCenter
