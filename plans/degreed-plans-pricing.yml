@@ -92,3 +92,33 @@ notes: >-
   5 months. Annual contract renewals should be negotiated proactively.
   Degreed does not publicly list enterprise pricing; all quotes are customized
   based on organizational size, features required, and integration complexity.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - seat
+  units:
+  - seat
+  plans:
+  - name: Individual
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: Professional (SMB)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: Enterprise
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
