@@ -55,7 +55,7 @@
     quality:
     - silver
     builder: 'community (Meltano Hub variant maintainers: the-prairie)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: degreed-microsoft-teams-own
   label: Microsoft Teams (own)
