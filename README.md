@@ -1,4 +1,4 @@
-# Degreed (degreed)
+# Degreed
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,115 @@
 
 Degreed is a learning experience platform with a REST API for managing learning pathways, tracking skill development, accessing content integrations, and reporting workforce upskilling data. The API enables organizations to manage users, content, completions, skills, pathways, accomplishments, and social learning features using OAuth 2.0 authentication. Multi-region deployments are supported across US, EU, and Canada data centers.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/apis.yml)
+**Areas:** Learning Experience Platform · Skill Development · Learning Pathways · Workforce Upskilling · E-Learning · HR Technology
 
-## Scope
+## Degreed on APIs.io
 
-- **Type:** Index
+Everything profiled for Degreed is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/degreed/](https://apis.io/providers/degreed/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Learning Experience Platform
-- Skill Development
-- Learning Pathways
-- Workforce Upskilling
-- eLearning
-- HR Technology
+- [Degreed API](https://apis.io/apis/degreed/degreed-api/) — The Degreed REST API provides HTTP-based access to manage learning data within the Degreed platform. It covers user management, learning content (articles,…
 
-## Timestamps
+### Published properties
 
-- **Created:** Fri Jun 12 2026 20:00:00 GMT-0400 (Eastern Daylight Time)
-- **Modified:** Fri Jun 12 2026 20:00:00 GMT-0400 (Eastern Daylight Time)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Degreed API
+Model Context Protocol servers that expose the API to agents.
 
-The Degreed REST API provides HTTP-based access to manage learning data within the Degreed platform. It covers user management, learning content (articles, books, courses, videos, podcasts, events), pathways, skill tracking, completions, accomplishments, groups, required and recommended learning, and xAPI statement ingestion. Authentication uses OAuth 2.0 Client Credentials Flow.
+- [degreed](https://apis.io/servers/degreed/degreed/)
 
-- **Human URL:** [https://developer.degreed.com/reference/overview](https://developer.degreed.com/reference/overview)
-- **Base URL:** `https://api.degreed.com`
+#### JSON-LD (1)
 
-#### Tags
+Linked-data contexts for the provider's vocabulary.
 
-- Learning
-- Skills
-- Pathways
-- Completions
-- Users
-- Content
+- [Degreed Context](https://apis.io/jsonld/degreed/degreed-context/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developer.degreed.com/docs/getting-started-with-the-api)
-- [Authentication](https://developer.degreed.com/docs/authentication)
-- [Rate Limits](https://developer.degreed.com/docs/rate-limiting)
-- [Integrations](https://developer.degreed.com/docs/degreed-integrations)
-- [Changelog](https://developer.degreed.com/changelog)
-- [x A P I](https://developer.degreed.com/docs/getting-started-with-the-xapi)
-- [Open A I Index](https://developer.degreed.com/llms.txt)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Degreed Domain Security](https://apis.io/security/degreed/degreed-domain-security/)
+- [Degreed Trust Center](https://apis.io/security/degreed/degreed-trust-center/)
 
-- [Plans](https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/plans/degreed-plans-pricing.yml)
-- [Rate Limits](https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/rate-limits/degreed-rate-limits.yml)
-- [Fin Ops](https://raw.githubusercontent.com/api-evangelist/degreed/refs/heads/main/finops/degreed-finops.yml)
+#### Plans and pricing (1)
 
-## Maintainers
+Published plans, tiers and prices.
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- [Degreed Plans Pricing](https://apis.io/plans/degreed/degreed-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Degreed Rate Limits](https://apis.io/rate-limits/degreed/degreed-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Degreed Finops](https://apis.io/finops/degreed/degreed-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://degreed.com)
+- [Blog](https://degreed.com/experience/newsroom/)
+
+## API Evangelist rating
+
+**Kin Score 17.0** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 68.3 |
+| Contract quality | 6.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 13.1 |
+| Access clarity | 15.8 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/degreed/](https://apis.io/providers/degreed/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Degreed: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/degreed/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
